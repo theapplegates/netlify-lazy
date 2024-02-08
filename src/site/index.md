@@ -92,3 +92,26 @@ Removing the CSS class which applies the blur once our new image source is loade
 Need some reference code to get you going? You can clone [the code for this site]({{ pkg.repository.url }}) to use as an example.
 
 Once cloned, you can run the build locally or push to Netlify and start getting the benefits of the Netlify Image CDN right away.
+
+
+A rendering of what the exoplanet K2-18 b might look like.
+
+{% set somePhotos = [
+  {url: "EXOPLANET-K2-18-b.jpg", credit: "Paul", creditURL: "https://paulapplegate.com"}
+] %}
+<section class="post-teaser">
+{%- for photo in somePhotos %}
+  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
+  {% lazypicture photo.url, "Yay for artist rendering" %}
+{%- endfor -%}
+</section >
+
+{% set somePhotos = [
+  {url: "Methane-Carbon-Dioxide-Atmosphere-K2-18-b.png", credit: "Paul", creditURL: "https://paulapplegate.com"}
+] %}
+<section class="post-teaser">
+{%- for photo in somePhotos %}
+  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
+  {% lazypicture photo.url, "Look at that graph" %}
+{%- endfor -%}
+</section >
