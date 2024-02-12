@@ -115,3 +115,13 @@ A rendering of what the exoplanet K2-18 b might look like.
   {% lazypicture photo.url, "Look at that graph" %}
 {%- endfor -%}
 </section >
+
+{% set somePhotos = [
+  {url: "plane-landing.jpg", credit: "Paul", creditURL: "https://paulapplegate.com"}
+] %}
+<section class="post-teaser">
+{%- for photo in somePhotos %}
+  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
+  {% lazypicture photo.url, "Land that plane" %}
+{%- endfor -%}
+</section >
