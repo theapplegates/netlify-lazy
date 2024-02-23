@@ -125,3 +125,23 @@ A rendering of what the exoplanet K2-18 b might look like.
   {% lazypicture photo.url, "Land that plane" %}
 {%- endfor -%}
 </section >
+
+{% set somePhotos = [
+  {url: "true-size-Aferica-1-of-2.jpeg", credit: "Paul", creditURL: "https://paulapplegate.com"}
+] %}
+<section class="post-teaser">
+{%- for photo in somePhotos %}
+  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
+  {% lazypicture photo.url, "It's big" %}
+{%- endfor -%}
+</section >
+
+{% set somePhotos = [
+  {url: "plane-sunset.jpg", credit: "Daniel Olah", creditURL: "https://unsplash.com/photos/the-wing-of-an-airplane-as-the-sun-sets-xBdLX7muc1w?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash"}
+] %}
+<section class="post-teaser">
+{%- for photo in somePhotos %}
+  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
+  {% lazypicture photo.url, "On a wing & a prayer" %}
+{%- endfor -%}
+</section >
