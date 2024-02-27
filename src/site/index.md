@@ -86,7 +86,7 @@ This sets _each image source_ to use a tiny (typically less that 1k) version of 
 Then, thanks to the magic of the browser's [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API). We can detect when our images come into the viewport, and [use JavaScript to update our image sources]({{ pkg.repository.url }}/blob/master/src/js/lazy.js) to use more appropriately sized images in our responsive picture element.
 
 {% set somePhotos = [
-  {url: "half-pancakes.jpgg", credit: "Not Sure", creditURL: "https://no-idea.com"}
+  {url: "half-pancakes.jpg", credit: "Not Sure", creditURL: "https://no-idea.com"}
 ] %}
 <section class="post-teaser">
 {%- for photo in somePhotos %}
