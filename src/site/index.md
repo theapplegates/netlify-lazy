@@ -85,6 +85,28 @@ This sets _each image source_ to use a tiny (typically less that 1k) version of 
 
 Then, thanks to the magic of the browser's [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API). We can detect when our images come into the viewport, and [use JavaScript to update our image sources]({{ pkg.repository.url }}/blob/master/src/js/lazy.js) to use more appropriately sized images in our responsive picture element.
 
+{% set somePhotos = [
+  {url: "half-pancakes.jpgg", credit: "Not Sure", creditURL: "https://no-idea.com"}
+] %}
+<section class="post-teaser">
+{%- for photo in somePhotos %}
+  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
+  {% lazypicture photo.url, "Yummy" %}
+{%- endfor -%}
+</section >
+
+{% set somePhotos = [
+  {url: "Aerogel-hand.jpg", credit: "Paul", creditURL: "https://paulapplegate.com"}
+] %}
+<section class="post-teaser">
+{%- for photo in somePhotos %}
+  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
+  {% lazypicture photo.url, "Hot? Nope." %}
+{%- endfor -%}
+</section >
+
+
+
 Removing the CSS class which applies the blur once our new image source is loaded completes the effect.
 
 ## Get started with Netlify Image CDN
