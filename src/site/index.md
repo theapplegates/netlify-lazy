@@ -117,12 +117,22 @@ A rendering of what the exoplanet K2-18 b might look like.
 </section >
 
 {% set somePhotos = [
-  {url: "plane-landing.jpg", credit: "Paul", creditURL: "https://paulapplegate.com"}
+  {url: "plane-sunset.jpg", credit: "Daniel Olah", creditURL: "https://unsplash.com/photos/the-wing-of-an-airplane-as-the-sun-sets-xBdLX7muc1w?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash"}
 ] %}
 <section class="post-teaser">
 {%- for photo in somePhotos %}
   <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
-  {% lazypicture photo.url, "Land that plane" %}
+  {% lazypicture photo.url, "On a wing & a prayer" %}
+{%- endfor -%}
+</section >
+
+{% set somePhotos = [
+  {url: "big-ship.jpg", credit: "Schmidt Ocean Institute", creditURL: "https://schmidtocean.org"}
+] %}
+<section class="post-teaser">
+{%- for photo in somePhotos %}
+  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
+  {% lazypicture photo.url, "All aboard" %}
 {%- endfor -%}
 </section >
 
