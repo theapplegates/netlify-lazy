@@ -177,7 +177,3 @@ A rendering of what the exoplanet K2-18 b might look like.
   {% lazypicture photo.url, "On a wing & a prayer" %}
 {%- endfor -%}
 </section >
-
-{% lazypicture "vieste_italy_fzd6ap2.jpg", "A snazzy lighthouse" %}
-
-{% lazypicture vieste_italy_fzd6ap2.jpg , "A snazzy lighthouse" %}
