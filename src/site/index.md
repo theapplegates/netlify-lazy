@@ -96,6 +96,16 @@ Then, thanks to the magic of the browser's [Intersection Observer API](https://d
 </section >
 
 {% set somePhotos = [
+  {url: "Apple-watch.png", credit: "Me", creditURL: "https://paulapplegate.com"}
+] %}
+<section class="post-teaser">
+{%- for photo in somePhotos %}
+  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
+  {% lazypicture photo.url, "Modular Ultra" %}
+{%- endfor -%}
+</section >
+
+{% set somePhotos = [
   {url: "Aerogel-hand.jpg", credit: "Paul", creditURL: "https://paulapplegate.com"}
 ] %}
 <section class="post-teaser">
