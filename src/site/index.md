@@ -189,11 +189,11 @@ A rendering of what the exoplanet K2-18 b might look like.
 </section >
 
 {% set somePhotos = [
-  {url: "contract.jpg", credit: "Me", creditURL: "https://paulapplegate.com"}
+  {url: "plane-landing.jpg", credit: "Me", creditURL: "https://paulapplegate.com"}
 ] %}
 <section class="post-teaser">
 {%- for photo in somePhotos %}
   <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
-  {% lazypicture photo.url, "A contract" %}
+  {% lazypicture photo.url, "A nice day to land. What will paradise give you?" %}
 {%- endfor -%}
 </section >
