@@ -6,8 +6,9 @@ module.exports = (url, alt = "Missing alt text") => {
 
     // Generate all required image formats 
     const formatPromises = outputFormats.map(format => { 
-        return sharp(`/images/${url}`) // Adjust the path if needed
-            .resize({ width: }); 
+// Inside the formatPromises.map callback
+return sharp(`/images/${url}`) // Adjust the path if needed
+            .resize({ width: /* Your desired width here */}) 
             [format]({ quality: /* Your desired quality setting */ }) 
             .toFile(`/images/${imageName}.${format}`); 
     });
