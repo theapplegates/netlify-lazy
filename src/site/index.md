@@ -6,6 +6,16 @@ layout: default
 Take a look at [the code on GitHub]({{ pkg.repository.url }}), or read on, for more explanation and examples.
 
 {% set somePhotos = [
+  {url: "921834.jpg", credit: "Cajeo Zhang", creditURL: "<a href="https://unsplash.com/photos/a-wooden-table-topped-with-plates-and-a-vase-FwNlf47_KBQ?utm_source=your_app_name&utm_medium=referral">"}
+] %}
+<section class="post-teaser">
+{%- for photo in somePhotos %}
+  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
+  {% lazypicture photo.url, "A table & vase" %}
+{%- endfor -%}
+</section >
+
+{% set somePhotos = [
   {url: "lighthouse-5.jpg", credit: "ezgi yıldırım", creditURL: "https://unsplash.com/photos/Ej1mWW2cd6Q"}
 ] %}
 <section class="post-teaser">
@@ -14,7 +24,6 @@ Take a look at [the code on GitHub]({{ pkg.repository.url }}), or read on, for m
   {% lazypicture photo.url, "A snazzy lighthouse" %}
 {%- endfor -%}
 </section >
-
 
 ## Image transformation
 
