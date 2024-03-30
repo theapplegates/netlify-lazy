@@ -81,11 +81,7 @@ These images have been added to the page in various sizes, using the picture ele
 </section >
 
 {% set somePhotos = [
-  {url: "A235981_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"},
-  {url: "A235992_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"},
-  {url: "A235993_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"},
-  {url: "A235998_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"},
-  {url: "A236045_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"}
+  {url: "A235981_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"}
   ] %}
 
 <section class="post-teaser">
