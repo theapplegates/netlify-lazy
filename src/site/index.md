@@ -6,12 +6,22 @@ layout: default
 Take a look at [the code on GitHub]({{ pkg.repository.url }}), or read on, for more explanation and examples.
 
 {% set somePhotos = [
-  {url: "lighthouse-5.jpg", credit: "ezgi yıldırım", creditURL: "https://unsplash.com/photos/Ej1mWW2cd6Q"}
+  {url: "vieste_italy.jpg", credit: "Look up later", creditURL: "https://unsplash.com/photos/Ej1mWW2cd6Q"}
 ] %}
 <section class="post-teaser">
 {%- for photo in somePhotos %}
   <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
-  {% lazypicture photo.url, "A snazzy lighthouse" %}
+  {% lazypicture photo.url, "A snazzy picture" %}
+{%- endfor -%}
+</section >
+
+{% set somePhotos = [
+  {url: "stairs.jpg", credit: "ezgi yıldırım", creditURL: "https://unsplash.com/photos/Ej1mWW2cd6Q"}
+] %}
+<section class="post-teaser">
+{%- for photo in somePhotos %}
+  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
+  {% lazypicture photo.url, "Up or down" %}
 {%- endfor -%}
 </section >
 
@@ -80,6 +90,7 @@ outputs this html:
   <img src="/images/tiny/lighthouse.jpg" alt="A snazzy lighthouse" />
 </picture>
 ```
+
 
 This sets _each image source_ to use a tiny (typically less that 1k) version of the image. With some CSS, we size the image to fit and add some blurring to smooth it all down nicely.
 
