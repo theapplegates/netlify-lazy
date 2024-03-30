@@ -1,6 +1,7 @@
 @import '_includes/scss/_variables';
-@import '_includes/scss/_mixins';
+@import '_includes/scss/_mixins'; 
 @import '_includes/scss/_syntax';
+@import '_includes/scss/_breakpoints';
 
 * {
   margin: 0;
@@ -130,11 +131,7 @@ a {
     }
   }
 }
-
-
-
 .post-teaser {
-
   picture {
     width: 100%;
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
@@ -146,29 +143,40 @@ a {
       width: 100%;
       transition: filter 0.5s,
     }
+    @include bp(small) {
+      width: 800px;
+    }
+    @include bp(medium) {
+      width: 1000px;  
+    }
+    @include bp(large) {
+      width: 1200px;
+    }
   }
-
+  
   picture.lazy-initial {
-    img {
-      width: calc(100% + 2 * #{$blurRadius});
-      filter: blur($blurRadius *2 );
-      margin: ($blurRadius * -1) ($blurRadius * -2) ($blurRadius * -2)  ($blurRadius * -1);
+      img {
+        width: calc(100% + 2 * #{$blurRadius});
+        filter: blur($blurRadius *2 );
+        margin: ($blurRadius * -1) ($blurRadius * -2) ($blurRadius * -2)  ($blurRadius * -1);
+      }
+    }
+  
+  }
+footer {
+    margin-top: 6em;
+    padding-top: 4em;
+    padding-bottom: 6em;
+    border-top: solid 1px mix($text-color, $page-color, 10%);
+    font-size: 0.7em;
+    color: mix($text-color, $page-color, 40%);
+  
+    a:link,
+    a:visited {
+      color: mix($text-color, $page-color, 70%);
     }
   }
 
-}
 
 
-footer {
-  margin-top: 6em;
-  padding-top: 4em;
-  padding-bottom: 6em;
-  border-top: solid 1px mix($text-color, $page-color, 10%);
-  font-size: 0.7em;
-  color: mix($text-color, $page-color, 40%);
-
-  a:link,
-  a:visited {
-    color: mix($text-color, $page-color, 70%);
-  }
-}
+// ... (rest of the main.txt content remains the same)
