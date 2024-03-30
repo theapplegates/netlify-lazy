@@ -1,3 +1,20 @@
 {
-	"siteId": "654b1908-40da-4b38-a9a1-5e3b3ecca77b"
+	"siteId": "654b1908-40da-4b38-a9a1-5e3b3ecca77b",
+	"geolocation": {
+		"data": {
+			"city": "Cincinnati",
+			"country": {
+				"code": "US",
+				"name": "United States"
+			},
+			"subdivision": {
+				"code": "OH",
+				"name": "Ohio"
+			},
+			"timezone": "America/New_York",
+			"latitude": 39.1671,
+			"longitude": -84.5422
+		},
+		"timestamp": 1711757361602
+	}
 }

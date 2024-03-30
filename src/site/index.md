@@ -2,7 +2,6 @@
 title: Roll your own lazy loading
 layout: default
 ---
-
 Take a look at [the code on GitHub]({{ pkg.repository.url }}), or read on, for more explanation and examples.
 
 {% set somePhotos = [
@@ -14,6 +13,7 @@ Take a look at [the code on GitHub]({{ pkg.repository.url }}), or read on, for m
   {% lazypicture photo.url, "A table & vase" %}
 {%- endfor -%}
 </section >
+
 
 {% set somePhotos = [
   {url: "lighthouse-5.jpg", credit: "ezgi yıldırım", creditURL: "https://unsplash.com/photos/Ej1mWW2cd6Q"}
