@@ -6,7 +6,7 @@ layout: default
 Take a look at [the code on GitHub]({{ pkg.repository.url }}), or read on, for more explanation and examples.
 
 {% set somePhotos = [
-  {url: "921834.jpg", credit: "Cajeo Zhang", creditURL: "<a href="https://unsplash.com/photos/a-wooden-table-topped-with-plates-and-a-vase-FwNlf47_KBQ?utm_source=your_app_name&utm_medium=referral"},
+  {url: "921834.jpg", credit: "Cajeo Zhang", creditURL: "https://unsplash.com/photos/a-wooden-table-topped-with-plates-and-a-vase-FwNlf47_KBQ?utm_source=your_app_name&utm_medium=referral"}
 ] %}
 <section class="post-teaser">
 {%- for photo in somePhotos %}
