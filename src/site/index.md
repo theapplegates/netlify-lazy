@@ -65,6 +65,35 @@ These images have been added to the page in various sizes, using the picture ele
 {%- endfor -%}
 </section >
 
+{% set somePhotos = [
+  {url: "A210280_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"},
+  {url: "A210281_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"},
+  {url: "A210282_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"},
+  {url: "A210283_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"},
+  {url: "A210284_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"}
+  ] %}
+
+<section class="post-teaser">
+{%- for photo in somePhotos %}
+  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
+  {% lazypicture photo.url, "A great car" %}
+{%- endfor -%}
+</section >
+
+{% set somePhotos = [
+  {url: "A235981_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"},
+  {url: "A235992_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"},
+  {url: "A235993_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"},
+  {url: "A235998_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"},
+  {url: "A236045_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"}
+  ] %}
+
+<section class="post-teaser">
+{%- for photo in somePhotos %}
+  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
+  {% lazypicture photo.url, "A great SUV" %}
+{%- endfor -%}
+</section >
 
 ## A picture helper
 
