@@ -9,7 +9,7 @@ function updateAttributeURL(element, attr, swapOut, swapIn) {
 function loadImage(picture) {
   var sources = picture.children;
   var loadingPath = "images/tiny";
-  var sizes = ["large", "largeer", "medium", "mediumer", "small", "smaller"];
+  var sizes = ["xxlarge", "xlarge", "large", "medium", "small", "xsmall"];
 
   for (var s = 0; s < sources.length; s++) {
     // update the src or srcset urls

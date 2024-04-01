@@ -15,7 +15,7 @@ Take a look at [the code on GitHub]({{ pkg.repository.url }}), or read on, for m
 </section >
 
 {% set somePhotos = [
-  {url: "Easter-candy-eggs.jpg", credit: "Charlota Blunarova", creditURL: "https://paulapplegate.com"},
+  {url: "https://res.cloudinary.com/paulapplegate-com/image/upload/v1711839811/candy-eggs.jpg", credit: "Charlota Blunarova", creditURL: "https://paulapplegate.com"},
   {url: "vieste_italy.jpg", credit: "Jesse Orrico", creditURL: "https://paulapplegate.com"}] %}
 
 <section class="post-teaser">
