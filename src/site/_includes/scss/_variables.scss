@@ -1,7 +1,15 @@
 // Breakpoints
-$bp-small: "(min-width: 400px)";
-$bp-medium: "(min-width: 740px)";
-$bp-large: "(min-width: 1200px)";
+//$bp-small: "(min-width: 400px)";
+//$bp-medium: "(min-width: 740px)";
+//$bp-large: "(min-width: 1200px)";
+// Updated breakpoint values
+$bp-xsmall: "(max-width: 480px)";
+$bp-small: "(min-width: 481px) and (max-width: 767px)";
+$bp-medium: "(min-width: 768px) and (max-width: 991px)";
+$bp-large: "(min-width: 992px) and (max-width: 1199px)";
+$bp-xlarge: "(min-width: 1200px) and (max-width: 1599px)";
+$bp-xxlarge: "(min-width: 1600px)";
+
 
 // Colours
 $page-color: #fff;
