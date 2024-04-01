@@ -33,8 +33,8 @@ These images have been added to the page in various sizes, using the picture ele
 {% set somePhotos = [
   {url: "joanna-stolowicz-8BES7-Ljtco-unsplash.jpg", credit: "Joanna Stołowicz", creditURL: "<a href="https://unsplash.com/photos/a-bowl-filled-with-white-and-brown-speckled-eggs-8BES7-Ljtco?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>"},
   {url: "annie-spratt-kX3Cuec-bEo-unsplash-a.jpg", credit: "Annie Spratt", creditURL: "<a href="https://unsplash.com/photos/a-view-of-a-mountain-range-with-snow-on-it-kX3Cuec-bEo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>"},
-  {url: "eugenivy_now-hSJNjHcSu3Y-unsplash-a.jpg", credit: "Євгенія Височина", creditURL: "<a href="https://unsplash.com/photos/a-couple-of-bikes-parked-next-to-a-building-hSJNjHcSu3Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>"}
-  ] %}
+  {url: "eugenivy_now-hSJNjHcSu3Y-unsplash-a.jpg", credit: "Євгенія Височина", creditURL: "<a href="https://unsplash.com/photos/a-couple-of-bikes-parked-next-to-a-building-hSJNjHcSu3Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>"}, // Add comma here
+] %}
 
 <section class="post-teaser">
 {%- for photo in somePhotos %}
