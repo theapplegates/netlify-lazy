@@ -1,30 +1,25 @@
----
-title: Roll your own lazy loading
-layout: default
----
-
 Take a look at [the code on GitHub]({{ pkg.repository.url }}), or read on, for more explanation and examples.
 
 {% set somePhotos = [
-  {url: "vieste_italy.jpg", credit: "Look up later", creditURL: "https://unsplash.com/photos/Ej1mWW2cd6Q"}
+  {url: "lighthouse-5.jpg", credit: "ezgi yıldırım", creditURL: "https://unsplash.com/photos/Ej1mWW2cd6Q"}
 ] %}
 <section class="post-teaser">
 {%- for photo in somePhotos %}
   <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
-  {% lazypicture photo.url, "A snazzy picture" %}
+  {% lazypicture photo.url, "A snazzy lighthouse" %}
 {%- endfor -%}
 </section >
 
 {% set somePhotos = [
-  {url: "stairs.jpg", credit: "ezgi yıldırım", creditURL: "https://unsplash.com/photos/Ej1mWW2cd6Q"}
-] %}
+  {url: "Easter-candy-eggs.jpg", credit: "Charlota Blunarova", creditURL: "https://paulapplegate.com"},
+  {url: "vieste_italy.jpg", credit: "Jesse Orrico", creditURL: "https://paulapplegate.com"}] %}
+
 <section class="post-teaser">
 {%- for photo in somePhotos %}
   <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
-  {% lazypicture photo.url, "Up or down" %}
+  {% lazypicture photo.url, "Two unsplash pictures" %}
 {%- endfor -%}
 </section >
-
 
 ## Image transformation
 
@@ -55,8 +50,9 @@ These images have been added to the page in various sizes, using the picture ele
 {% set somePhotos = [
   {url: "lighthouse-4.jpg", credit: "Charlota Blunarova", creditURL: "https://unsplash.com/photos/of4r2gHpCqU"},
   {url: "lighthouse-3.jpg", credit: "Jesse Orrico", creditURL: "https://unsplash.com/photos/5xWf-gE_45U"},
-  {url: "lighthouse-2.jpg", credit: "Youjeen Cho", creditURL: "https://unsplash.com/photos/kNxB07EA9r4"}
-  ] %}
+  {url: "lighthouse-2.jpg", credit: "Youjeen Cho", creditURL: "https://unsplash.com/photos/kNxB07EA9r4"},
+  {url: "lighthouse-1.jpg", credit: "Chris Meads", creditURL: "https://unsplash.com/photos/9FidI-IQxwY"}
+] %}
 
 <section class="post-teaser">
 {%- for photo in somePhotos %}
@@ -64,25 +60,6 @@ These images have been added to the page in various sizes, using the picture ele
   {% lazypicture photo.url, "A snazzy lighthouse" %}
 {%- endfor -%}
 </section >
-
-{% set somePhotos = [
-  {url: "A210280_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"},
-  {url: "A210281_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"},
-  {url: "A210282_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"},
-  {url: "A210283_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"},
-  {url: "A210284_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"}
-  ] %}
-
-<section class="post-teaser">
-{%- for photo in somePhotos %}
-  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
-  {% lazypicture photo.url, "A great car" %}
-{%- endfor -%}
-</section >
-
-{% set somePhotos = [
-  {url: "A235981_large.jpg", credit: "Audi USA", creditURL: "https://audiusa.com"}
-  ] %}
 
 
 ## A picture helper
@@ -108,7 +85,6 @@ outputs this html:
   <img src="/images/tiny/lighthouse.jpg" alt="A snazzy lighthouse" />
 </picture>
 ```
-
 
 This sets _each image source_ to use a tiny (typically less that 1k) version of the image. With some CSS, we size the image to fit and add some blurring to smooth it all down nicely.
 

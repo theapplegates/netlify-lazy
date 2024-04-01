@@ -1,3 +1,4 @@
+
 // Updated breakpoint values
 $bp-xsmall: "(max-width: 480px)";
 $bp-small: "(min-width: 481px) and (max-width: 767px)";
@@ -26,4 +27,7 @@ $bp-xxlarge: "(min-width: 1600px)";
   @else if $point == xxlarge {
     @media #{$bp-xxlarge} { @content; }
   }
+
+}
+
 }

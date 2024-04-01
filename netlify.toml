@@ -1,44 +1,43 @@
 [build]
-  command = "yarn run build"
-  publish = "dist"
-  NODE_ENV = "10.15.3"
+command = "yarn run build"
+publish = "dist"
+NODE_ENV = "10.15.3"
 
 
 [dev]
-  command = "yarn run start"
-
+command = "yarn run start"
 
 [[redirects]]
-    from = "/images/xsmall/*"  
-    to = "/.netlify/images/?w=480&fit=cover&url=/images/:splat"
-    status = 200
-  
-  [[redirects]]
-    from = "/images/small/*"
-    to = "/.netlify/images/?w=767&fit=cover&url=/images/:splat" 
-    status = 200
-  
-  [[redirects]]
-    from = "/images/medium/*"
-    to = "/.netlify/images/?w=991&fit=cover&url=/images/:splat"
-    status = 200
-  
-  [[redirects]]  
-    from = "/images/large/*"
-    to = "/.netlify/images/?w=1199&fit=cover&url=/images/:splat"
-    status = 200
-  
-  [[redirects]]
-    from = "/images/xlarge/*" 
-    to = "/.netlify/images/?w=1599&fit=cover&url=/images/:splat"
-    status = 200
-  
-  [[redirects]]
-    from = "/images/xxlarge/*"
-    to = "/.netlify/images/?w=1600&fit=cover&url=/images/:splat" 
-    status = 200
-  
-  [[redirects]]
-    from = "/images/original/*"
-    to = "/.netlify/images/?url=/images/:splat"
-    status = 200
+  from = "/images/xsmall/*"  
+  to = "/.netlify/images/?w=480&fit=cover&url=/images/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/images/small/*"
+  to = "/.netlify/images/?w=767&fit=cover&url=/images/:splat" 
+  status = 200
+
+[[redirects]]
+  from = "/images/medium/*"
+  to = "/.netlify/images/?w=991&fit=cover&url=/images/:splat"
+  status = 200
+
+[[redirects]]  
+  from = "/images/large/*"
+  to = "/.netlify/images/?w=1199&fit=cover&url=/images/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/images/xlarge/*" 
+  to = "/.netlify/images/?w=1599&fit=cover&url=/images/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/images/xxlarge/*"
+  to = "/.netlify/images/?w=1600&fit=cover&url=/images/:splat" 
+  status = 200
+
+[[redirects]]
+  from = "/images/original/*"
+  to = "/.netlify/images/?url=/images/:splat"
+  status = 200
