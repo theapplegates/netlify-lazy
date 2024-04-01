@@ -4,27 +4,6 @@ layout: default
 ---
 Take a look at [the code on GitHub]({{ pkg.repository.url }}), or read on, for more explanation and examples.
 
-{% set somePhotos = [
-  {url: "lighthouse-5.jpg", credit: "ezgi yıldırım", creditURL: "https://unsplash.com/photos/Ej1mWW2cd6Q"}
-] %}
-<section class="post-teaser">
-{%- for photo in somePhotos %}
-  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
-  {% lazypicture photo.url, "A snazzy lighthouse" %}
-{%- endfor -%}
-</section >
-
-{% set somePhotos = [
-  {url: "https://res.cloudinary.com/paulapplegate-com/image/upload/v1711839811/candy-eggs.jpg", credit: "Charlota Blunarova", creditURL: "https://paulapplegate.com"},
-  {url: "vieste_italy.jpg", credit: "Jesse Orrico", creditURL: "https://paulapplegate.com"}] %}
-
-<section class="post-teaser">
-{%- for photo in somePhotos %}
-  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
-  {% lazypicture photo.url, "Two unsplash pictures" %}
-{%- endfor -%}
-</section >
-
 ## Image transformation
 
 Thanks to the [Netlify Image CDN](https://docs.netlify.com/image-cdn/overview/?utm_source=github&utm_medium=icdn-example-pnh&utm_campaign=devex), we can take advantage of the ability to perform on-the-fly [image transformations](https://docs.netlify.com/image-cdn/overview/?utm_source=github&utm_medium=icdn-example-pnh&utm_campaign=devex#transform-images) to deliver resized and cropped, versions of the images, in the best format for the user's browser, directly from Netlify's optimised [edge infrastructure](https://www.netlify.com/features/adn/?utm_source=github&utm_medium=icdn-example-pnh&utm_campaign=devex).
@@ -52,18 +31,18 @@ The [redirects]({{ pkg.repository.url }}/blob/master/netlify.toml) and transform
 These images have been added to the page in various sizes, using the picture element with multiple image sources.
 
 {% set somePhotos = [
-  {url: "lighthouse-4.jpg", credit: "Charlota Blunarova", creditURL: "https://unsplash.com/photos/of4r2gHpCqU"},
-  {url: "lighthouse-3.jpg", credit: "Jesse Orrico", creditURL: "https://unsplash.com/photos/5xWf-gE_45U"},
-  {url: "lighthouse-2.jpg", credit: "Youjeen Cho", creditURL: "https://unsplash.com/photos/kNxB07EA9r4"},
-  {url: "lighthouse-1.jpg", credit: "Chris Meads", creditURL: "https://unsplash.com/photos/9FidI-IQxwY"}
-] %}
+  {url: "joanna-stolowicz-8BES7-Ljtco-unsplash.jpg", credit: "Joanna Stołowicz", creditURL: "<a href="https://unsplash.com/photos/a-bowl-filled-with-white-and-brown-speckled-eggs-8BES7-Ljtco?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>"},
+  {url: "annie-spratt-kX3Cuec-bEo-unsplash-a.jpg", credit: "Annie Spratt", creditURL: "<a href="https://unsplash.com/photos/a-view-of-a-mountain-range-with-snow-on-it-kX3Cuec-bEo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>"},
+  {url: "eugenivy_now-hSJNjHcSu3Y-unsplash-a.jpg", credit: "Євгенія Височина", creditURL: "<a href="https://unsplash.com/photos/a-couple-of-bikes-parked-next-to-a-building-hSJNjHcSu3Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>"}
+  ] %}
 
 <section class="post-teaser">
 {%- for photo in somePhotos %}
   <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
-  {% lazypicture photo.url, "A snazzy lighthouse" %}
+  {% lazypicture photo.url, "Some good Unsplash pics" %}
 {%- endfor -%}
 </section >
+
 
 
 ## A picture helper
