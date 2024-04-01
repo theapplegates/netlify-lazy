@@ -7,11 +7,10 @@ module.exports = function(eleventyConfig) {
   // Layout aliases can make templates more portable
   eleventyConfig.addLayoutAlias('default', 'layouts/base.njk');
 
-  // syntax highlighting plugin
+// syntax highlighting plugin
   eleventyConfig.addPlugin(syntaxHighlight, {
     templateFormats: "md"
   });
-
   // Sass pipeline
   eleventyConfig.addTemplateFormats("scss");
   eleventyConfig.addExtension("scss", {
