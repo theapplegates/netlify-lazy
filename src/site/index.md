@@ -31,10 +31,17 @@ The [redirects]({{ pkg.repository.url }}/blob/master/netlify.toml) and transform
 These images have been added to the page in various sizes, using the picture element with multiple image sources.
 
 {% set somePhotos = [
-  {url: "joanna-stolowicz-8BES7-Ljtco-unsplash.jpg", credit: "Joanna Stołowicz", creditURL: "<a href="https://unsplash.com/photos/a-bowl-filled-with-white-and-brown-speckled-eggs-8BES7-Ljtco?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>"},
-  {url: "annie-spratt-kX3Cuec-bEo-unsplash-a.jpg", credit: "Annie Spratt", creditURL: "<a href="https://unsplash.com/photos/a-view-of-a-mountain-range-with-snow-on-it-kX3Cuec-bEo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>"},
-  {url: "eugenivy_now-hSJNjHcSu3Y-unsplash-a.jpg", credit: "Євгенія Височина", creditURL: "<a href="https://unsplash.com/photos/a-couple-of-bikes-parked-next-to-a-building-hSJNjHcSu3Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>"}, // Add comma here
+  {url: "joanna-stolowicz-8BES7-Ljtco-unsplash.jpg", credit: "Joanna Stołowicz", creditURL: "https://unsplash.com/photos/a-bowl-filled-with-white-and-brown-speckled-eggs-8BES7-Ljtco?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"},
+  {url: "annie-spratt-kX3Cuec-bEo-unsplash-a.jpg", credit: "Annie Spratt", creditURL: "https://unsplash.com/photos/a-view-of-a-mountain-range-with-snow-on-it-kX3Cuec-bEo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"},
+  {url: "eugenivy_now-hSJNjHcSu3Y-unsplash-a.jpg", credit: "Євгенія Височина", creditURL: "https://unsplash.com/photos/a-couple-of-bikes-parked-next-to-a-building-hSJNjHcSu3Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"}
 ] %}
+
+<section class="post-teaser">
+{%- for photo in somePhotos %}
+  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener">{{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
+  {% lazypicture photo.url, "Some good Unsplash pics" %}
+{%- endfor -%}
+</section>
 
 <section class="post-teaser">
 {%- for photo in somePhotos %}
