@@ -43,14 +43,6 @@ These images have been added to the page in various sizes, using the picture ele
 {%- endfor -%}
 </section>
 
-<section class="post-teaser">
-{%- for photo in somePhotos %}
-  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
-  {% lazypicture photo.url, "Some good Unsplash pics" %}
-{%- endfor -%}
-</section >
-
-
 
 ## A picture helper
 
