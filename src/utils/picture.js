@@ -8,7 +8,7 @@ module.exports = (url, alt = "Missing alt text") => {
     const formatPromises = outputFormats.map(format => { 
         return sharp(`/images/${url}`) // Adjust the path if needed
             .resize({ width: 1600 }) // Set the maximum width to match the xxlarge breakpoint
-            [format]({ quality: /* Your desired quality setting */ }) 
+            [format]({ quality: /* Your desired quality setting */ })
             .toFile(`/images/${imageName}.${format}`); 
     });
 
