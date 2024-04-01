@@ -31,9 +31,9 @@ The [redirects]({{ pkg.repository.url }}/blob/master/netlify.toml) and transform
 These images have been added to the page in various sizes, using the picture element with multiple image sources.
 
 {% set somePhotos = [
-  {url: "joanna-stolowicz-8BES7-Ljtco-unsplash.jpg", credit: "Joanna Stołowicz", creditURL: "https://unsplash.com/photos/Ej1mWW2cd6Q"}
-  {url: "annie-spratt-kX3Cuec-bEo-unsplash-a.jpg", credit: "Annie Spratt", creditURL: "https://na/com"}
-  {url: "eugenivy_now-hSJNjHcSu3Y-unsplash-a.jpg", credit: "Євгенія Височина", creditURL: "https://na/com"}
+  {url: "joanna-stolowicz-8BES7-Ljtco-unsplash.jpg", credit: "Joanna Stołowicz", creditURL: "https://unsplash.com/photos/Ej1mWW2cd6Q"},
+  {url: "annie-spratt-kX3Cuec-bEo-unsplash-a.jpg", credit: "Annie Spratt", creditURL: "https://na/com"},
+  {url: "eugenivy_now-hSJNjHcSu3Y-unsplash-a.jpg", credit: "Євгенія Височина", creditURL: "https://na/com"},
   {url: "danny-greenberg-F6mBll2j-pk-unsplash.jpg", credit: "Danny Greenberg", creditURL: "https://unsplash.com/@by_danny_g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"}
 ] %}
 <section class="post-teaser">
